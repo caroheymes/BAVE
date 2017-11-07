@@ -1,10 +1,21 @@
 <h1 class ="text-center">Les dernières horreurs en ligne </h1>
 </br>
 <div class="col-xs-12 col-sm-6 col-sm-offset-3">   
-       <%= render 'shared/list' %>
+<div class="text-center">
+    
+
+ <% @products.each do |p| %>
+        <p>
+                <%= link_to p.title, product_path(p), class: "list-link"%> - <%= p.created_at.strftime("%d %b. %Y") %> -  <%= p.user.email %>
+        </p>
+        <%end%>
+        </br>
+</div>
+        
         
         <div class ="text-center">
             <!--%= paginate @products %> -->
+            <!--< %= will_paginate %>-->
             <%= link_to "Retour à l'accueil", root_path, class:"btn btn-success" %>
 <%= link_to "Je lâche mon fiel →", new_product_path, class:"btn btn-danger"  %>
         </div>

@@ -1,23 +1,30 @@
-<h1 class="text-center">Examiner le fiel en détail </h1>
-<h3 class="text-center">
-    <%=    @product.title %>
-</h3>
+<h3 class="text-center">Texte intégral </h3>
+<h1 class="text-center">
+    <%=    @product.title %>"
+</h1>
+<div class="text-center">
      <% if @product.user %>
         <h5 class="text-center">
-        <%= @product.user.name %> a raison de nous faire partager cette bonne occasion de rigoler 
+         <%= mail_to   @product.user.email, class: "list-link" do %> Répondre à celui qui le dit <% end%>
+       
         </h3>
      <% end %>
-       
-    <h3 class="text-center">
-        <%= @product.content %> 
-    </h3>
-    
+       <div class="container">
+               <blockquote>
+                    <em>
+                       "<%= @product.content %>"
+                    </em> 
+                </blockquote>
+       </div>
+</div>
+
+    </div>
     
    
 
 <p class="text-center">
     </br>
-   <%= link_to "Améliorer", edit_product_path(@product), class: "btn btn-danger" %>
+   <%= link_to "Améliorer", edit_product_path(@product), class: "btn btn-success" %>
    <%= link_to "Supprimer", product_path(@product), method: :delete, class: "btn btn-danger" %>
 
 </p>

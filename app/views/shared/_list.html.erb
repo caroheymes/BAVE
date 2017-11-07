@@ -1,6 +1,10 @@
- <% @products.each do |p| %>
+<div class="text-center">
+    
+
+ <% @products.order(id: :desc).limit(5).each do |p| %>
         <p>
-                <%= link_to p.title, product_path(p) %> -  <% p.created_at%>
+                <%= link_to p.title, product_path(p), class: "home-link"%> - <%= p.created_at.strftime("%d %b. %Y") %> -  <%= p.user.email %>
         </p>
         <%end%>
+</div>
         

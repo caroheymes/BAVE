@@ -1,0 +1,10 @@
+<div class="text-center">
+    
+
+ <% @products.each do |p| %>
+        <p>
+                <%= link_to p.title, product_path(p), class: "list-link"%> - <%= p.created_at.strftime("%d %b. %Y") %> -  <%= p.user.email %>
+        </p>
+        <%end%>
+</div>
+        

@@ -5,6 +5,7 @@ class ProductsController < ApplicationController
     def index
     @products = Product.all
     #@products = @products.order(created_at: :desc).paginate(:page => params[:page], :per_page => 10 )
+    #@products = Product.paginate(page: params[:page], per_page: 10)
 
     end
     
@@ -24,28 +25,24 @@ class ProductsController < ApplicationController
         render :new
       end
     end
-    
-
-    
-    
+  
     
     def edit
       if @product.save && @product.user = current_user
-        redirect_to products_path
+      redirect_to products_path
       else
-        render :new
+      render :new
       end
     end
-
-    def update
-    if @product.update(product_params) && @product.user == current_user       # 2
-      redirect_to products_path             # 3
-    else
-      flash[:alert] = "Action impossible, Vous n'avez pas créé cet événement. Mais vous pouvez en créer un autre dans le formulaire ci-dessous :"
-      render :edit                          # 4
-    end
-    end
     
+    def update
+    if @product.user == current_user && @product.update(product_params)
+      redirect_to products_path
+    else
+      flash[:alert] = "Impossible de modifier"
+      render :edit
+    end
+    end
     
 
     def destroy
@@ -65,15 +62,12 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
     end
     
-    def product_params
-    params.require(:product).permit(:title, :content)
+    #def product_params
+    #params.require(:product).permit(:title, :content, :user_id, :user_id_attr)
+    #end
+    def product_params 
+      params.require(:product).permit( :title, :content, :user_id, :user_id => [:name])
     end
-    
-    #def current_user?
-    #if @product.user != current_user
-    #    flash[:alert] = "Vous n'avez pas créé cet événement, vous ne pouvez pas le modifier"
-    #    redirect_to products_path
-    #end
-    #end
+
    
 end

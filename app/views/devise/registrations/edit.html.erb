@@ -1,4 +1,11 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<div class="container">
+    <div class="row">
+        
+        
+        <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+          <h2>Mon profil</h2>
+         
+          
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= f.error_notification %>
@@ -11,9 +18,9 @@
       <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
     <% end %>
 
-    <%= f.input :password, autocomplete: "off", hint: "leave it blank if you don't want to change it", required: false %>
+    <%= f.input :password, autocomplete: "off", hint: "Laisse tel quel si tu ne veux pas le changer", required: false %>
     <%= f.input :password_confirmation, required: false %>
-    <%= f.input :current_password, hint: "we need your current password to confirm your changes", required: true %>
+    <%= f.input :current_password, hint: "On a besoin de ton mot de passe actuel pour enregistrer les changements", required: true %>
   </div>
 
   <div class="form-actions">
@@ -23,6 +30,9 @@
 
 <h3>Cancel my account</h3>
 
-<p>pas content(e)? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "t'es sûr? Tu vas nous manquer" }, method: :delete %></p>
+<p>pas content(e)? <%= link_to "Supprimer mon compte", registration_path(resource_name), data: { confirm: "t'es sûr? Tu vas nous manquer" }, method: :delete %></p>
 
 <%= link_to "Back", :back %>
+</div>
+</div>
+</div>
