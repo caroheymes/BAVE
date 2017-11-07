@@ -1,0 +1,6 @@
+ <% @products.each do |p| %>
+        <p>
+                <%= link_to p.title, product_path(p) %> -  <% p.created_at%>
+        </p>
+        <%end%>
+        
