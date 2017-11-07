@@ -16,8 +16,6 @@ gem 'jquery-rails'
 gem 'sass-rails'
 gem 'simple_form'
 gem 'uglifier'
-#gem 'kaminari'
-#gem 'will_paginate'
 
 group :development, :test do
   gem 'pry-byebug'
