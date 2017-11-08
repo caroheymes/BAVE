@@ -28,11 +28,7 @@ class ProductsController < ApplicationController
   
     
     def edit
-      if @product.save && @product.user = current_user
-      redirect_to products_path
-      else
-      render :new
-      end
+      
     end
     
     def update
@@ -66,7 +62,9 @@ class ProductsController < ApplicationController
     #params.require(:product).permit(:title, :content, :user_id, :user_id_attr)
     #end
     def product_params 
-      params.require(:product).permit( :title, :content, :user_id, :user_id => [:name])
+      params.require(:product).permit( :title, :content, :user_id)
+      #:user_id => [:name]
+      #params.require(:user).permit(:email, :name)
     end
 
    
