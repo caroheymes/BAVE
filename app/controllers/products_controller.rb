@@ -4,8 +4,8 @@ class ProductsController < ApplicationController
     
     def index
     @products = Product.all
-    #@products = @products.order(created_at: :desc).paginate(:page => params[:page], :per_page => 10 )
-    #@products = Product.paginate(page: params[:page], per_page: 10)
+    @products = @products.order(created_at: :desc)
+    #@products = @products.paginate(:page => params[:page], :per_page => 10 )
 
     end
     
@@ -28,7 +28,6 @@ class ProductsController < ApplicationController
   
     
     def edit
-      
     end
     
     def update
@@ -58,13 +57,10 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
     end
     
-    #def product_params
-    #params.require(:product).permit(:title, :content, :user_id, :user_id_attr)
-    #end
+
     def product_params 
       params.require(:product).permit( :title, :content, :user_id)
-      #:user_id => [:name]
-      #params.require(:user).permit(:email, :name)
+      
     end
 
    

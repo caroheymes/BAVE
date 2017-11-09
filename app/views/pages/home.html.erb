@@ -2,7 +2,7 @@
   <div class="banner-content">
     <h1>Marre de passer une journée de merde ? </br></h1>
     
-    <% if user_signed_in? %>
+    
           <% if @products.any? -%>
             <div>
             <h2>Ici tu peux déverser ton fiel alors enjoy !</h2>
@@ -13,7 +13,7 @@
             </div>
     <%else%>
       <div>
-        Pour cracher ton venin en bonne compagnie, et rire un peu <%= link_to "Inscris-toi →", products_path, class:"btn btn-danger btn-lg"%>
+        Pour cracher ton venin en bonne compagnie, et rire un peu <%= link_to "Inscris-toi →",  new_user_registration_path, class:"btn btn-danger btn-lg"%>
       </div>
-    <%end%>
+
 </div>

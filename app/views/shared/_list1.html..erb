@@ -1,7 +1,7 @@
 <div class="text-center">
     
 
- <% @products.each do |p| %>
+ <% @products.order(created_at: :desc).each do |p| %>
         <p>
                 <%= link_to p.title, product_path(p), class: "list-link"%> - <%= p.created_at.strftime("%d %b. %Y") %> -  <%= p.user.name %>
         </p>
