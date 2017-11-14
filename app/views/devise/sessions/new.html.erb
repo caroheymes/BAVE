@@ -1,11 +1,56 @@
-<div class="container">
-    <div class="row">
-        
-        
-        <div class="col-xs-12 col-sm-6 col-sm-offset-3">
-          <h2>Log in</h2>
-
-<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+<div class="navbar">
+		<div class="navbar-wrapper">
+			<div class="left-container">
+				<ul class="list-dropdown">
+					<li>Already have an Intuit account?</li>
+				</ul>
+				<ul class="list-dropdown">
+					<li><a href="https://accounts.intuit.com/account-recovery.html?offering_id=Intuit.ifs.mint&namespace_id=50000026&redirect_url=https://mint.intuit.com/overview.event?task=S">I forgot my User ID or Password</a></li>
+				</ul>
+			</div>
+			<div class="right-container">
+				<a class="btn-small" href="#">
+					<i class="fa fa-lock" aria-hidden="true"></i> Sign-in
+				</a>
+			</div>
+			<div class="clear">
+			</div>
+		</div>
+	</div>
+	<!--image du formulaire-->
+	
+	<div class="img-center">
+	  <h2>Log in</h2>
+		<img src="http://res.cloudinary.com/caroheymes/image/upload/c_scale,w_120/v1510593635/intuit_q7zbv3.png" alt="INTUIT">
+	</div>
+		<div class="container">
+	    <div class="row">        
+	        <div class="cols-sm-4 card text-center">
+					<div class="card-small-padding text-center">
+						<ul class="list-inline">
+							<li>
+								<a href="#">
+								<img src="http://res.cloudinary.com/caroheymes/image/upload/c_scale,h_20,w_20/v1510593712/turbotax_kx7bvv.png" alt=""> turbotax
+								</a>
+							</li>
+							<li>
+								<a href="#">
+								<img src="http://res.cloudinary.com/caroheymes/image/upload/c_scale,h_20,w_20/v1510593635/quickbooks_c4mc91.png" alt=""> quickbooks
+								</a>
+							</li>
+							<li>
+								<a href="#">
+								<img src="http://res.cloudinary.com/caroheymes/image/upload/c_scale,h_20/v1510594034/mint_ktbtd3.png" alt=""> mint
+								</a>
+							</li>
+						</ul>
+					</div>
+					<!--Filet central-->
+					<div class="border-top align-top text-center"">
+						<h1>One Account.</br> Everything Intuit</h1>
+						<p>Create an account for all Intuit's products including Mint. <a href="#">Learn more</a></p>
+					</div>
+  <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="form-inputs">
     <%= f.input :email, required: false, autofocus: true %>
     <%= f.input :password, required: false %>
@@ -13,11 +58,21 @@
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Log in" %>
+    <%= f.button :submit, "Log in", class: "cols-sm-4 btn-big text-center" %>
   </div>
 <% end %>
 
 <%= render "devise/shared/links" %>
 </div>
 </div>
+</div>
+</div>
+</div>
+</div>
+<div class="img-center small">
+		<img src="http://res.cloudinary.com/caroheymes/image/upload/c_scale,w_60/v1510593635/intuit_q7zbv3.png" alt="INTUIT">
+</div>
+	
+<div class="col-md-12 text-center small-font">
+	© 2017 Intuit, Inc. All rights reserved. Intuit, QuickBooks, QB, TurboTax, ProConnect and Mint are registered trademarks of Intuit Inc.<br>Terms and conditions, features, support, pricing, and service options subject to change without notice.
 </div>

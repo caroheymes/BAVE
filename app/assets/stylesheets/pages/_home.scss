@@ -1,9 +1,143 @@
 /* home link */
-.home-link {
-  color: #ffffff;
-  font-size: 25px;
+body{
+  background: (#eceef1 !important);
+  color:  #404040;
+  font-size: (1.3em !important);
+  line-height: 1.6em;
+  display: block;
 }
-.home-link:hover {
-  color: pink;
-  text-decoration: none;
+
+.navbar{
+	position:fixed;
+  	top: 0px;	
+}
+
+.navbar-wrapper{
+	max-height: 40px;
+	position: fixed;
+	top: 0px;
+	margin: 10px;
+	width:100%;
+	display: flex;
+  	align-items: center;
+  	justify-content: space-between;
+
+}
+
+.list-dropdown{
+	list-style: none;
+}
+.left-container{
+	width: 85%;
+	list-style: none;
+	float: left;
+	line-height: 10px;
+	text-align: right;
+	margin-right: 15px;
+	
+}
+.right-container{
+	width: 15%;
+	float:right;
+}
+.clear{
+	clear:both;
+}
+
+.img-center{
+	padding-top: 70px;
+	width: 600px;
+	margin:0 auto;
+	text-align: center;
+}
+
+.row{
+	background-color: #eceef1;
+	display: block;
+}
+
+.card{
+	background-color: white;
+	width: 400px;
+	margin: 20px auto;
+	padding: 20px;
+	}
+
+.card-small-padding{
+	background-color: white;
+	width: 380px;
+	padding: 5px;
+}	
+
+.border-top{
+	border-top: 1px solid;
+	border-color: rgb(200, 202, 205);
+	width: 350px;
+	margin: 20px auto;
+}
+.card-shadow{
+	box-shadow: 1px 1px 3px rgb(200, 202, 205);
+	border-radius: 25px;
+}
+
+.text-center{
+	text-align: center;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.list-inline{
+	list-style: none;
+}
+
+.list-inline li{
+	display:inline-block;
+	width: 105px;
+	margin: 0px auto;
+}
+
+.a{ 
+	color:#0077C5;
+}
+
+
+.a:hover{
+
+}
+
+.btn-small{
+	border: 1px solid #ccc;
+	background-color: #0077C5;
+	color: white;
+  	padding: 10px 15px;
+  	border-radius: 3px;
+}
+
+.btn-big{
+	background-color:(#0077C5 !important);
+    margin-top: 28px;
+    padding: 10px 60px;
+    color:(white !important);
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+
+.form{
+ 	display: inline-block;
+ }
+ .control-label{
+ 	text-align:(left !important);
+ }
+
+
+ .small{
+ 	padding-top: 30px;
+ 	padding-bottom: 10px;
+	width: 600px;
+	margin:0 auto;
+	text-align: center;
+}
+.small-font{
+	font-size: 0.8em;
 }

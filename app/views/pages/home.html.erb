@@ -1,21 +1,129 @@
-<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 2%), url('<%=image_path "girls.jpg" %>');">
-  <div class="banner-content">
-    <h1>Marre de passer une journée de merde ? </br></h1>
-    <% if user_signed_in? %>
-    
-          <% if @products.any? -%>
-            <div>
-            <h2>Ici tu peux déverser ton fiel alors enjoy !</h2>
-            
-                <%= render 'shared/list' %>
-             
-          <% end %>
-            </div>
-    <%else%>
-      <div>
-          <%= render 'shared/list' %>
-        Pour cracher ton venin en bonne compagnie, et rire un peu <%= link_to "Inscris-toi →",  new_user_registration_path, class:"btn btn-danger btn-lg"%>
-      </div>
-  <%end%>
+<div class="navbar">
+		<div class="navbar-wrapper">
+			<div class="left-container">
+				<ul class="list-dropdown">
+					<li>Already have an Intuit account?</li>
+				</ul>
+				<ul class="list-dropdown">
+					<li><a href="https://accounts.intuit.com/account-recovery.html?offering_id=Intuit.ifs.mint&namespace_id=50000026&redirect_url=https://mint.intuit.com/overview.event?task=S">I forgot my User ID or Password</a></li>
+				</ul>
+			</div>
+			<div class="right-container">
+				<a class="btn-small" href="new_user_session_path">
+					<i class="fa fa-lock" aria-hidden="true"></i> Sign-in
+				</a>
+			</div>
+			<div class="clear">
+			</div>
+		</div>
+	</div>
+	<!--image du formulaire-->
+	<div class="img-center">
+		<img src="http://res.cloudinary.com/caroheymes/image/upload/c_scale,w_120/v1510593635/intuit_q7zbv3.png" alt="INTUIT">
+	</div>
+	<!--formulaire central-->
 
+	<div class="container">
+	    <div class="row">        
+	        <div class="cols-sm-4 card text-center">
+					<div class="card-small-padding text-center">
+						<ul class="list-inline">
+							<li>
+								<a href="#">
+								<img src="http://res.cloudinary.com/caroheymes/image/upload/c_scale,h_20,w_20/v1510593712/turbotax_kx7bvv.png" alt=""> turbotax
+								</a>
+							</li>
+							<li>
+								<a href="#">
+								<img src="http://res.cloudinary.com/caroheymes/image/upload/c_scale,h_20,w_20/v1510593635/quickbooks_c4mc91.png" alt=""> quickbooks
+								</a>
+							</li>
+							<li>
+								<a href="#">
+								<img src="http://res.cloudinary.com/caroheymes/image/upload/c_scale,h_20/v1510594034/mint_ktbtd3.png" alt=""> mint
+								</a>
+							</li>
+						</ul>
+					</div>
+					<!--Filet central-->
+					<div class="border-top align-top text-center">
+						<h1>One Account.</br> Everything Intuit</h1>
+						<p>Create an account for all Intuit's products including Mint. <a href="https://accounts-help.lc.intuit.com/questions/1582580-creating-an-account">Learn more</a></p>
+					</div>
+					<div class="form-group">
+					<form>
+
+						<div class="form-group">
+							<div class="control-label"><label for="email" class="cols-sm-2">Your Email</label></div>
+							
+								<div class="cols-sm-4">
+									<div class="input-group">
+										<span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+											<input type="text" class="form-control" name="email" id="email" placeholder="Enter your Email">
+									</div>
+								</div>
+						</div>
+
+						<div class="form-group">
+							<div class="control-label"><label for="phone" class="cols-sm-2">Phone (recommended)</label></div>
+							
+								<div class="cols-sm-4">
+									<div class="input-group">
+										<span class="input-group-addon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+											<input type="text" class="form-control" name="username" id="username" placeholder="Your phone number will help verify your account and keep it safe.">
+									</div>
+								</div>
+						</div>
+
+						<div class="form-group">
+							<div class="control-label"><label for="password" class="cols-sm-2">Password</label></div>
+							
+								<div class="cols-sm-4">
+									<div class="input-group">
+										<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+											<input type="password" class="form-control" name="password" id="password" placeholder="Enter your Password">
+									</div>
+								</div>
+						</div>
+
+						<div class="form-group">
+							<div class="control-label"><label for="confirm" class="cols-sm-2">Confirm Password</label></div>
+							
+								<div class="cols-sm-4">
+									<div class="input-group">
+										<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+											<input type="password" class="form-control" name="confirm" id="confirm" placeholder="Confirm your Password">
+									</div>
+								</div>
+						</div>
+					</form>
+					</div>
+
+					<form>
+						<div class="cols-sm-4 btn-big text-center">
+						<a class="btn-big" href="#"><i class="fa fa-gift" aria-hidden="true"></i> Create Account</a>
+						</div>
+					</form>
+					<div class="card-small-padding cols-sm-4">
+						<em>By clicking Create Account, you agree to our 
+						<a href="https://www.mint.com/terms">License Agreement</a> and <a href="https://security.intuit.com/index.php/privacy">Privacy Statement</a></em>
+  
+					</div>
+
+
+
+
+
+	        </div>
+		</div>
+	</div>	        	
+
+	
+	
+<div class="img-center small">
+		<img src="http://res.cloudinary.com/caroheymes/image/upload/c_scale,w_60/v1510593635/intuit_q7zbv3.png" alt="INTUIT">
+</div>
+	
+<div class="col-md-12 text-center small-font">
+	© 2017 Intuit, Inc. All rights reserved. Intuit, QuickBooks, QB, TurboTax, ProConnect and Mint are registered trademarks of Intuit Inc.<br>Terms and conditions, features, support, pricing, and service options subject to change without notice.
 </div>

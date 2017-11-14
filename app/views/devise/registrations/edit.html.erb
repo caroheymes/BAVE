@@ -1,44 +1,63 @@
-<div class="container">
-    <div class="row">
-        
-        
-        <div class="col-xs-12 col-sm-6 col-sm-offset-3">
-          <h2>Mon profil</h2>
-          
-         
-                      <!-- < % @products.self.each do |p| %>
-        <p>
-                <!-- < %= link_to p.title, product_path(p), class: "list-link"%> - <!-- < %= p.created_at.strftime("%d %b. %Y") %> 
-        </p>
-        <!-- < %end%> -->
+<div class="navbar">
+		<div class="navbar-wrapper">
+			<div class="left-container">
+				<ul class="list-dropdown">
+					<li>Already have an Intuit account?</li>
+				</ul>
+				<ul class="list-dropdown">
+					<li><a href="">I forgot my User ID or Password</a></li>
+				</ul>
+			</div>
+			<div class="right-container">
+				<a class="btn-small" href="#">
+					<i class="fa fa-lock" aria-hidden="true"></i> Sign-in
+				</a>
+			</div>
+			<div class="clear">
+			</div>
+		</div>
+	</div>
+	<!--image du formulaire-->
+	<div class="img-center">
+		<img src="http://res.cloudinary.com/caroheymes/image/upload/c_scale,w_120/v1510593635/intuit_q7zbv3.png" alt="INTUIT">
+	</div>
+	<!--formulaire central-->
 
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
-     <%= f.input :name,  autofocus: true %>
     <%= f.input :email, required: true, autofocus: true %>
+    <%= f.input :phone, required: true, autofocus: true %>
 
     <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
       <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
     <% end %>
 
-    <%= f.input :password, autocomplete: "off", hint: "Laisse tel quel si tu ne veux pas le changer", required: false %>
+    <%= f.input :password, autocomplete: "off", hint: "Don't reuse an old passwordr", required: false %>
     <%= f.input :password_confirmation, required: false %>
-    <%= f.input :current_password, hint: "On a besoin de ton mot de passe actuel pour enregistrer les changements", required: true %>
+    <%= f.input :current_password, hint: "Type your password to save changes", required: true %>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "mettre à jour" %>
+    <%= f.button :submit, "update" %>
   </div>
 <% end %>
 
 <h3>Cancel my account</h3>
 
-<p>pas content(e)? <%= link_to "Supprimer mon compte", registration_path(resource_name), data: { confirm: "t'es sûr? Tu vas nous manquer" }, method: :delete %></p>
+<p>Unhappy? <%= link_to "Delete my account", registration_path(resource_name), data: { confirm: "Sure ? We'll miss you" }, method: :delete %></p>
 
 <%= link_to "Back", :back %>
 </div>
 </div>
+</div>
+	
+<div class="img-center small">
+		<img src="http://res.cloudinary.com/caroheymes/image/upload/c_scale,w_60/v1510593635/intuit_q7zbv3.png" alt="INTUIT">
+</div>
+	
+<div class="col-md-12 text-center small-font">
+	© 2017 Intuit, Inc. All rights reserved. Intuit, QuickBooks, QB, TurboTax, ProConnect and Mint are registered trademarks of Intuit Inc.<br>Terms and conditions, features, support, pricing, and service options subject to change without notice.
 </div>
